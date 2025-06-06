@@ -1,4 +1,5 @@
 import os
+import time
 import requests
 from config import DISCORD_WEBHOOK_URL  # Import from config.py
 
@@ -19,4 +20,7 @@ def ping(host):
         return "Ping failed!"
 
 if __name__ == "__main__":
-    print(ping("google.com"))
+    host = "google.com"  # Change this to your desired host
+    while True:
+        print(ping(host))
+        time.sleep(3600)  # Wait for 1 hour (3600 seconds)
